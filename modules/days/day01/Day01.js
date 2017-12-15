@@ -1,4 +1,4 @@
-const Utility = require('../tools/Utility.js');
+const Utility = require('../../tools/Utility.js');
 
 module.exports = class Day01 {
 

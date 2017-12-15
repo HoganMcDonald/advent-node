@@ -1,7 +1,20 @@
 // import modules
+const fs = require('fs');
+const path = require('path');
 
-const Day01 = require('./modules/day01/Day01.js');
-const Day02 = require('./modules/day02/Day02.js');
+// returns array of directories
+const getDirectories = srcPath => fs.readdirSync(srcPath).filter(file => fs.statSync(path.join(srcPath, file)).isDirectory());
+const daysComplete = getDirectories('./modules/days').length;
 
-console.log(Day01.solve(), Day01.bonus());
-console.log(Day02.solve());
+const days = {};
+
+for (let i = 1; i <= daysComplete; i++) {
+  let dayNumber = (i < 10) ? '0' + i : String(i);
+  days[`Day${dayNumber}`] = require(`./modules/days/day${dayNumber}/Day${dayNumber}.js`);
+}
+
+for (let day in days) {
+  let part1 = days[day].solve();
+  let part2 = days[day].bonus();
+  console.log(`${day}\n   solution: ${part1}\n   bonus: ${part2}\n`);
+}
