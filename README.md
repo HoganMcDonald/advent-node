@@ -6,9 +6,8 @@ I started some of these solutions in java in [another repo](https://github.com/H
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Advent of Code 2017](#advent-of-code-2017)
-  - [How to run](#how-to-run)
-  - [Links](#links)
+- [How to run](#how-to-run)
+- [Links](#links)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
