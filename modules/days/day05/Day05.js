@@ -25,7 +25,23 @@ module.exports = class Day05 {
   }
 
   static bonus() {
-    return 0;
+    let list = this._loadList();
+
+    let currentIndex = 0;
+    let jumps = 0;
+    let jump = list[currentIndex];
+
+    while (typeof list[currentIndex] !== 'undefined') {
+      if (list[currentIndex] >= 3) {
+        currentIndex += list[currentIndex]--;
+        jumps++;
+      } else {
+        currentIndex += list[currentIndex]++;
+        jumps++;
+      }
+    }
+
+    return jumps;
   }
 
 };
