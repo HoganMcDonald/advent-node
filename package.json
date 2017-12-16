@@ -7,6 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "clear && node main.js"
   },
-  "author": "",
+  "author": "Hogan McDonald",
   "license": "ISC"
 }
