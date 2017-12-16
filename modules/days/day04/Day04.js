@@ -11,10 +11,10 @@ module.exports = class Day04 {
   static solve() {
     let passphrases = this._loadPassphrases();
 
-    return passphrases.reduce( (s, passphrase) => {
-  		let passwords = passphrase.split(' ')
-  		return s + passwords.reduce( ( accumulator, currentValue, currentIndex, array ) => {
-        return accumulator && array.indexOf(currentValue) == currentIndex
+    return passphrases.reduce( (accumulator, passphrase) => {
+  		let passwords = passphrase.split(' ');
+  		return accumulator + passwords.reduce( ( accumulator, password, currentIndex, array ) => {
+        return accumulator && array.indexOf(password) == currentIndex
       })
     }, 0 );
   }
@@ -24,8 +24,8 @@ module.exports = class Day04 {
 
     return passphrases.reduce( (s, passphrase) => {
   		let passwords = passphrase.split(' ').map( a => ( a.split('').sort().join('') ) );
-  		return s + passwords.reduce( ( accumulator, currentValue, currentIndex, array ) => {
-        return accumulator && array.indexOf(currentValue) == currentIndex
+  		return s + passwords.reduce( ( accumulator, password, currentIndex, array ) => {
+        return accumulator && array.indexOf(password) == currentIndex
       })
     }, 0 );
   }
